@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tower of Hanoi</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <h1>Tower of Hanoi</h1>
+
+        <div class="controls">
+          <label for="diskCount">Number of Disks</label>
+          <input id="diskCount" type="number" min="1" max="8" value="3" />
+          <button id="startBtn">Auto Solve</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+        <div class="controls move-controls">
+          <label for="moveInput">Enter Move</label>
+          <input id="moveInput" type="text" placeholder="A->C" />
+          <button id="applyMoveBtn">Apply Move</button>
+        </div>
+
+        <div class="stats">
+          <div>
+            <span>Moves</span>
+            <strong id="moveCount">0</strong>
+          </div>
+          <div>
+            <span>Expected</span>
+            <strong id="expectedCount">7</strong>
+          </div>
+        </div>
+
+        <p id="message" class="message">Enter a number and click Start.</p>
+      </section>
+
+      <section class="game">
+        <div class="tower" id="towerA" data-rod="A">
+          <div class="rod-base"></div>
+          <div class="rod-label">A</div>
+        </div>
+        <div class="tower" id="towerB" data-rod="B">
+          <div class="rod-base"></div>
+          <div class="rod-label">B</div>
+        </div>
+        <div class="tower" id="towerC" data-rod="C">
+          <div class="rod-base"></div>
+          <div class="rod-label">C</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
